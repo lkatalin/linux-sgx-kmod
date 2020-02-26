@@ -1,5 +1,5 @@
 %if 0%{?fedora}
-%global buildforkernels akmod
+%global buildforkernels kmod
 %global debug_package %{nil}
 %endif
 
@@ -47,7 +47,7 @@ for kernel_version in %{?kernel_versions}; do
  install -D -m 755 -t %{buildroot}%{kmodinstdir_prefix}/${kernel_version%%___*}/%{kmodinstdir_postfix}/ $(find _kmod_build_${kernel_version%%___*}/ -name '*.ko')
  chmod u+x %{buildroot}%{_prefix}/lib/modules/*/extra/*/*
 done
-%{?akmod_install}
+%{?kmod_install}
 
 
 %changelog
