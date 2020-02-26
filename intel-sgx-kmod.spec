@@ -3,6 +3,7 @@
 %global debug_package %{nil}
 %endif
 
+#test
 Name:           intel-sgx-kmod
 Summary:        Kernel module (kmod) for Intel SGX Out of Tree Driver
 Version:        0.0.20200226
